@@ -2,5 +2,5 @@ projectKey=ssd_prac
 serverUrl=http://host.docker.internal:9000
 serverVersion=25.7.0.110598
 dashboardUrl=http://host.docker.internal:9000/dashboard?id=ssd_prac
-ceTaskId=40ec80c6-1438-48f4-821c-b2e03e968463
-ceTaskUrl=http://host.docker.internal:9000/api/ce/task?id=40ec80c6-1438-48f4-821c-b2e03e968463
+ceTaskId=43040554-6275-47a6-a528-bec735a09a9d
+ceTaskUrl=http://host.docker.internal:9000/api/ce/task?id=43040554-6275-47a6-a528-bec735a09a9d
