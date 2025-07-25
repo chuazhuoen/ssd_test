@@ -7,6 +7,9 @@ from selenium.webdriver.chrome.options import Options
 
 # === Unit/Integration tests with Flask test client ===
 
+app.config['WTF_CSRF_ENABLED'] = False
+
+
 def test_home_get():
     client = app.test_client()
     res = client.get('/')
