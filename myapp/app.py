@@ -47,3 +47,6 @@ def home():
 def new_page():
     user_input = session.get('user_input', '')
     return render_template('new_page.html', user_input=user_input)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
