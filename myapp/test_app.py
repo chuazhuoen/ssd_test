@@ -1,17 +1,11 @@
 # test_app.py
 import pytest
-import os
-os.environ["FLASK_ENV"] = "testing"
 from app import app
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 
 # === Unit/Integration tests with Flask test client ===
-
-app.config['WTF_CSRF_ENABLED'] = False
-
 
 def test_home_get():
     client = app.test_client()
