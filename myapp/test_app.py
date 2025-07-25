@@ -1,6 +1,9 @@
 # test_app.py
 import pytest
+import os
+os.environ["FLASK_ENV"] = "testing"
 from app import app
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options

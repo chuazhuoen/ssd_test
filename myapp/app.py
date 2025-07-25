@@ -2,11 +2,17 @@ from flask import Flask, render_template, request, redirect, session
 import html
 from flask_wtf.csrf import CSRFProtect
 
+import os
+
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
-# Enable CSRF protection
+# Disable CSRF protection if testing
+if os.getenv("FLASK_ENV") == "testing":
+    app.config['WTF_CSRF_ENABLED'] = False
+
 csrf = CSRFProtect(app)
+
 
 def is_malicious(user_input):
     """Detect simple XSS/SQL patterns"""
