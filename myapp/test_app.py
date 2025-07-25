@@ -31,7 +31,7 @@ def test_selenium_input_flow():
     chrome_options.add_argument("--headless")
     driver = webdriver.Chrome(options=chrome_options)
 
-    driver.get("http://localhost:5000")
+    driver.get("http://host.docker.internal:5000")
     input_field = driver.find_element(By.NAME, "user_input")
     input_field.send_keys("Hello World")
     driver.find_element(By.CSS_SELECTOR, "button[type=submit]").click()
