@@ -1,8 +1,12 @@
 from flask import Flask, render_template, request, redirect, session
 import html
+from flask_wtf.csrf import CSRFProtect
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
+
+# Enable CSRF protection
+csrf = CSRFProtect(app)
 
 def is_malicious(user_input):
     """Detect simple XSS/SQL patterns"""
