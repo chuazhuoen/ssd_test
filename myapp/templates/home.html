@@ -11,10 +11,10 @@
     {% endif %}
 
     <form method="POST" action="/">
-    {{ csrf_token() }}
-    <input type="text" name="user_input" value="{{ user_input }}">
-    <input type="submit" value="Submit">
-    </form>
+  {{ csrf_token() }}
+  <input type="text" name="user_input" value="{{ user_input }}">
+  <button type="submit">Submit</button>
+</form>
 
 </body>
 </html>
